@@ -1,0 +1,117 @@
+:root{
+    --back-color:#03396c;
+    --container-width: 1100px;
+}
+body{
+    margin: 0;
+    padding: 0;    
+}
+
+/* Top Bar */
+
+.top_bar{
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    background-color: var(--back-color);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    width: var(--container-width);   
+}
+.top_adress, .top_contact{
+    display: flex;
+    align-items: center;
+    color: white;
+    flex: 1;
+}
+.top_contact{
+    display: flex;
+    justify-content: space-around;
+}
+.top_contact span{
+    flex: 1
+    ;
+}
+
+/* Fim Top Bar */
+
+/* Header */
+
+header{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+}
+header .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--container-width);
+}
+header .logo, header .menu{
+    flex: 1;
+}
+header .logo{
+    display: flex;
+    justify-content: flex-start;
+}
+header .menu{
+    display: flex;
+    justify-content: center;
+}
+.menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;;
+}
+.menu  li {
+    position: relative;
+    display: inline-block;
+    background: var(--back-color);
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.menu li a{
+    color: #fff;
+    text-decoration: none;
+}
+.menu li:hover {
+    background: #024091;
+}
+.hidden_menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--back-color);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+    border-radius: 5px;
+}
+.hidden_menu li {
+    display: flex;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+.hidden_menu li:hover {
+    background: #024091;
+}
+.menu li:hover .hidden_menu {
+    display: block;
+}
+/* Fim Header */
+
+/* Banner */
+.banner{
+    background-image: url("/assets/Images/Banner.svg");
+}
