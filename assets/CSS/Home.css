@@ -1,13 +1,17 @@
 :root{
-    --back-color:#03396c;
-    --container-width: 1100px;
+    --back-color: #016392;
+    --font-color: #ffffff;
+    --back-hover: #014f73;
+    --container-width: 990px;
+    --title-color: #016392;
+    --footer-color: #011F4B;
 }
 body{
     margin: 0;
     padding: 0;    
 }
 
-/* Top Bar */
+/* Top Bar
 
 .top_bar{
     display: flex;
@@ -15,6 +19,7 @@ body{
     height: 40px;
     background-color: var(--back-color);
 }
+
 .container{
     display: flex;
     justify-content: center;
@@ -24,7 +29,19 @@ body{
     display: flex;
     align-items: center;
     color: white;
+}
+.top_adress{
     flex: 1;
+}
+.top_contact{
+    flex: 2;
+}
+.top_link a{
+    text-decoration: none;
+    
+}
+.top_link a:visited{
+    color: var(--font-color);
 }
 .top_contact{
     display: flex;
@@ -34,6 +51,8 @@ body{
     flex: 1
     ;
 }
+
+     */
 
 /* Fim Top Bar */
 
@@ -46,6 +65,9 @@ header{
     position: fixed;
     z-index: 1000;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    
 }
 header .container{
     display: flex;
@@ -53,8 +75,11 @@ header .container{
     align-items: center;
     width: var(--container-width);
 }
-header .logo, header .menu{
+header .logo{
     flex: 1;
+}
+header .menu{
+    flex: 2;
 }
 header .logo{
     display: flex;
@@ -83,7 +108,7 @@ header .menu{
     text-decoration: none;
 }
 .menu li:hover {
-    background: #024091;
+    background: var(--back-hover);
 }
 .hidden_menu {
     display: none;
@@ -104,7 +129,7 @@ header .menu{
     cursor: pointer;
 }
 .hidden_menu li:hover {
-    background: #024091;
+    background: var(--back-hover);
 }
 .menu li:hover .hidden_menu {
     display: block;
@@ -113,5 +138,197 @@ header .menu{
 
 /* Banner */
 .banner{
-    background-image: url("/assets/Images/Banner.svg");
+    display: inline-block;
+    position: relative;
+    height: 500px;
+}
+
+.banner_image img{
+    width: 100vw;
+    height: 500px;
+    object-fit: cover;
+}
+.banner_text{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    text-align: left;
+    font-weight: bold;
+}
+.banner_text h1{
+    font-size: 40px;
+    color: var(--title-color);
+    margin: 0;
+}
+.banner_text p{
+    font-size: 20px;
+    
+}
+.banner_text a{
+    text-decoration: none;
+    color: var(--font-color);
+    background-color: var(--back-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.banner_text a:hover{
+    background-color: var(--back-hover);
+}
+/* Fim Banner */
+
+/* Info Section */
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+.info .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--container-width);
+    
+}
+.info_text  h2 strong{
+    color: var(--title-color);
+    font-size: 30px;
+    
+}
+.info_image, .info_text{
+    flex: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.info_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info_image img{
+    height: 300px;
+    border-radius: 5px;
+}
+
+/* Fim Info Section */
+
+/* Service Section */
+.Services {
+    display: flex;
+    justify-content: center;
+    background-color: var(--back-color);
+    width: 100vw;
+    padding-bottom: 30px;
+}
+.Services .container{
+    display: flex;
+    justify-content: center;
+    width: var(--container-width);
+    flex-direction: column;
+}
+.title_services{
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+.title_services h2{
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.products{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.products a{
+    flex: 1 0 30%;
+    box-sizing: border-box;
+    background-color: #fff;
+    height: 480px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #000;
+}
+.products a :visited{
+    color: #000;
+}
+.Box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.Box h2{
+    text-align: center;
+    font-size: 24px;
+    margin-top: 10px;
+}
+.product_image, .product_description{
+    flex: 1;
+
+}
+.product_image{
+    display: flex;
+    justify-content: center;
+}
+.product_image img{
+    width: 80%;
+    object-fit: cover;
+    max-height: 250px;
+    border-radius: 10px;
+
+}
+.product_description{
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Fim Service Section */
+
+/* Footer */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: var(--footer-color);
+    color: #fff;
+    text-align: center;
+}
+
+footer .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    width: var(--container-width);
+}
+.footer_info, .footer_text, .footer_menu{
+    flex: 1;
+    margin: 0 10px;
+}
+.footer_info{
+    display: flex;
+    justify-content: start;
+    flex: 1;
+    flex-direction: column;
+    text-align: left;
+}
+.footer_menu ul{
+    list-style: none;
+    padding: 0;
+}
+.footer_menu ul li{
+    margin: 10px 0;
+}
+.footer_menu ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.footer_menu ul li a:visited{
+    color: #fff;
+}
+.footer_menu ul li a:hover{
+    text-decoration: underline;
 }
