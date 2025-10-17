@@ -92,3 +92,21 @@ header .menu{
 
 /* main */
 
+.about_us{
+    display: flex;
+    justify-content: center;
+}
+.about_us .container{
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    width: var(--container-width);
+}
+.aboutus_image, .aboutus_text{
+    flex: 1;
+    padding: 20px;
+}
+.aboutus_image img{
+    height: 400px;
+    border-radius: 10px;
+}
