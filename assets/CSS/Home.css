@@ -6,6 +6,10 @@
     --title-color: #016392;
     --footer-color: #011F4B;
 }
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
 body{
     margin: 0;
     padding: 0;    
@@ -64,12 +68,12 @@ header{
     height: 100px;
     position: fixed;
     z-index: 1000;
-    width: 100%;
+    width: 100vw;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     
 }
-header .container{
+.container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,13 +81,28 @@ header .container{
 }
 header .logo{
     flex: 1;
+    padding-left: 20px;
 }
 header .menu{
     flex: 2;
+    padding-right: 20px;
 }
 header .logo{
     display: flex;
     justify-content: flex-start;
+}
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333; /* Cor do ícone */
+    transition: 0.3s;
 }
 header .menu{
     display: flex;
@@ -134,37 +153,43 @@ header .menu{
 .menu li:hover .hidden_menu {
     display: block;
 }
+
+@media (min-width: 850px) and (max-width: 990px){
+
+}
+
 /* Fim Header */
 
 /* Banner */
-.banner{
-    display: inline-block;
-    position: relative;
+#banner{
+    display: flex;
+    justify-content: center;
+    background-image: url(../Images/Banner.svg);
+    background-position: center;
+    background-size: cover;
     height: 500px;
+}
+.banner_container{
+    justify-content: flex-start;
 }
 
-.banner_image img{
-    width: 100vw;
-    height: 500px;
-    object-fit: cover;
-}
 .banner_text{
-    position: absolute;
-    top: 50%;
-    left: 25%;
+    padding-left: 20px;
     text-align: left;
     font-weight: bold;
 }
 .banner_text h1{
     font-size: 40px;
     color: var(--title-color);
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
 }
-.banner_text p{
+.banner_text h2{
     font-size: 20px;
-    
+    color: var(--font-color);
 }
 .banner_text a{
+    display: inline-block;
     text-decoration: none;
     color: var(--font-color);
     background-color: var(--back-color);
@@ -191,9 +216,11 @@ header .menu{
     width: var(--container-width);
     
 }
+.info_text h2{
+    font-size: 30px;
+}
 .info_text  h2 strong{
     color: var(--title-color);
-    font-size: 30px;
     
 }
 .info_image, .info_text{
@@ -229,35 +256,31 @@ header .menu{
 }
 .title_services{
     text-align: center;
-    color: #fff;
+    color: var(--font-color);
     font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .title_services h2{
     font-size: 30px;
     margin-bottom: 5px;
+    color: var(--font-color);
 }
 .products{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 
-}
-.products a{
-    flex: 1 0 30%;
-    box-sizing: border-box;
-    background-color: #fff;
-    height: 480px;
-    margin: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #000;
-}
-.products a :visited{
-    color: #000;
 }
 .Box{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-color: #fff;
+    height: 480px;
+    width: 310px;
+    margin: 10px;
+    border-radius: 5px;
 }
 .Box h2{
     text-align: center;
@@ -276,12 +299,31 @@ header .menu{
     width: 80%;
     object-fit: cover;
     max-height: 250px;
+    height: 250px;
     border-radius: 10px;
-
+    
 }
 .product_description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 0 20px;
     text-align: center;
+}
+.products a{
+    display: inline-block;
+    padding: 10px;
+    background-color: var(--back-color);
+    text-decoration: none;
+    color: var(--font-color);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.products a:hover{
+    background-color: var(--back-hover);
+}
+.products a :visited{
+    color: var(--font-color);
 }
 
 /* Fim Service Section */
@@ -331,4 +373,16 @@ footer .container{
 }
 .footer_menu ul li a:hover{
     text-decoration: underline;
+}
+
+/* Layout for Tablets*/
+
+@media (min-width: 768px){
+    :root{
+        --contaier-width: 770px;
+    }
+
+    .container{
+        width: var(--contaier-width);
+    }
 }

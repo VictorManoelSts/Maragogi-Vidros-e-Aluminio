@@ -6,6 +6,9 @@
     --title-color: #016392;
     --footer-color: #011F4B;
 }
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 0;
     padding: 0;    
