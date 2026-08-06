@@ -15,50 +15,6 @@ body{
     padding: 0;    
 }
 
-/* Top Bar
-
-.top_bar{
-    display: flex;
-    justify-content: center;
-    height: 40px;
-    background-color: var(--back-color);
-}
-
-.container{
-    display: flex;
-    justify-content: center;
-    width: var(--container-width);   
-}
-.top_adress, .top_contact{
-    display: flex;
-    align-items: center;
-    color: white;
-}
-.top_adress{
-    flex: 1;
-}
-.top_contact{
-    flex: 2;
-}
-.top_link a{
-    text-decoration: none;
-    
-}
-.top_link a:visited{
-    color: var(--font-color);
-}
-.top_contact{
-    display: flex;
-    justify-content: space-around;
-}
-.top_contact span{
-    flex: 1
-    ;
-}
-
-     */
-
-/* Fim Top Bar */
 
 /* Header */
 
@@ -154,9 +110,6 @@ header .menu{
     display: block;
 }
 
-@media (min-width: 850px) and (max-width: 990px){
-
-}
 
 /* Fim Header */
 
@@ -181,8 +134,8 @@ header .menu{
 .banner_text h1{
     font-size: 40px;
     color: var(--title-color);
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 .banner_text h2{
     font-size: 20px;
@@ -203,18 +156,12 @@ header .menu{
 
 /* Info Section */
 
-.info{
+#info {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 50px 0;
-}
-.info .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: var(--container-width);
-    
+    height: 400px;
 }
 .info_text h2{
     font-size: 30px;
@@ -248,10 +195,7 @@ header .menu{
     width: 100vw;
     padding-bottom: 30px;
 }
-.Services .container{
-    display: flex;
-    justify-content: center;
-    width: var(--container-width);
+.column{
     flex-direction: column;
 }
 .title_services{
@@ -340,11 +284,7 @@ footer{
 }
 
 footer .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 20px 0;
-    width: var(--container-width);
 }
 .footer_info, .footer_text, .footer_menu{
     flex: 1;
@@ -356,6 +296,14 @@ footer .container{
     flex: 1;
     flex-direction: column;
     text-align: left;
+}
+.footer_info a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+.footer_info a:hover{
+    color: #cccccc;
+    text-decoration: underline;
 }
 .footer_menu ul{
     list-style: none;
@@ -372,17 +320,126 @@ footer .container{
     color: #fff;
 }
 .footer_menu ul li a:hover{
+    color: #cccccc;
     text-decoration: underline;
 }
 
+/*  End Footer */
+
+/* Services Pages */
+
+#Info_service{
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+
+}
+#Info_service .container{
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info_image{
+    flex: 1;
+    display: flex;
+    margin-right: 10px;
+    justify-content: center;
+
+}
+.info_image img{
+    height: 300px;
+    border-radius: 5px;
+}
+.info_text{
+    flex: 1;
+
+}
+h1{
+    color: var(--title-color);
+}
+
+/* Catalog */
+
+#Catalog{
+    display: flex;
+    justify-content: center;
+    background: var(--back-color);
+    padding-bottom: 50px;
+}
+#Catalog .container{
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.catalog_title{
+    color: #fff;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 30px;
+}
+.catalog_images{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.box {
+    display: flex;
+    justify-content: center;
+    flex: 1 0 20%;
+    box-sizing: border-box;
+    margin: 10px;
+    background-color: #fff;
+    height: 300px;
+    border-radius: 5px;
+}
+.box img{
+    margin-top: 20px;
+    max-width: 80%;
+    border-radius: 5px;
+    object-fit: cover;
+    height: 260px;
+}
+
+/* End Services Pages */
+
+/* About Us Page */
+
+#aboutUs{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+#aboutUs .container{
+    margin-bottom: 50px;
+}
+.aboutUs_content {
+    display: flex;
+    justify-content: center;
+}
+.aboutUs_img, .aboutUs_text{
+    flex: 1;
+    padding: 20px;
+}
+.aboutUs_img img{
+    height: 290px;
+    border-radius: 10px;
+}
+
+/* End About Us page */
+
+/* Contacts Page */
+
+
+
+
+/* End Contacts Page */
+
+
 /* Layout for Tablets*/
 
-@media (min-width: 768px){
-    :root{
-        --contaier-width: 770px;
-    }
-
-    .container{
-        width: var(--contaier-width);
-    }
-}
